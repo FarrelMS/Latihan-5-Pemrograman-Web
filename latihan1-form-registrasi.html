@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1 - Form Registrasi</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: block;
+        margin-top: 15px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .autocomplete-suggestions {
+        border: 1px solid #ccc;
+        max-height: 150px;
+        overflow-y: auto;
+        display: none;
+        background: white;
+        position: absolute;
+        width: calc(100% - 60px);
+        max-width: 390px;
+      }
+      .autocomplete-suggestions div {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .autocomplete-suggestions div:hover {
+        background-color: #f0f0f0;
+      }
+      .btn-group {
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn-send {
+        background-color: #007bff;
+      }
+      .btn-reset {
+        background-color: #007bff;
+        margin-left: 10px;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+      .err {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      .ok {
+        color: green;
+        font-size: 14px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>FORM REGISTRASI</h2>
+      <form id="f">
+        <label>Nama Mahasiswa:</label>
+        <input
+          type="text"
+          id="nama"
+          placeholder="Ketik huruf, misal: a"
+          autocomplete="off"
+        />
+        <div id="saran" class="autocomplete-suggestions"></div>
+
+        <label>NIM:</label>
+        <input type="text" id="nim" placeholder="Masukkan NIM" />
+
+        <label>Mata Kuliah:</label>
+        <select id="mk">
+          <option value="">Pilih Mata Kuliah</option>
+          <option value="Pemrograman Web">Pemrograman Web</option>
+          <option value="Basis Data">Basis Data</option>
+        </select>
+
+        <label>Dosen:</label>
+        <select id="dosen">
+          <option value="">Pilih Dosen</option>
+          <option value="Budi Santoso">Budi Santoso</option>
+          <option value="Siti Aminah">Siti Aminah</option>
+        </select>
+
+        <div class="err" id="err"></div>
+        <div class="ok" id="ok"></div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn-send">Send</button>
+          <button type="reset" id="reset" class="btn-reset">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script src="latihan1-form-registrasi.js"></script>
+  </body>
+</html>
