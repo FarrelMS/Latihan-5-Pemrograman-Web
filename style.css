@@ -1,0 +1,35 @@
+:root {
+  --indigo-primary: #4f46e5;
+  --indigo-hover: #4338ca;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bg-indigo {
+  background-color: var(--indigo-primary) !important;
+}
+.text-indigo {
+  color: var(--indigo-primary) !important;
+}
+
+.btn-indigo {
+  background-color: var(--indigo-primary);
+  border-color: var(--indigo-primary);
+}
+.btn-indigo:hover {
+  background-color: var(--indigo-hover);
+  border-color: var(--indigo-hover);
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.split-image {
+  background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}

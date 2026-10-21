@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Belajar - Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-indigo sticky-top shadow-sm">
+        <div class="container-xl">
+            <a class="navbar-brand fw-bold" href="index.html">📚 Ruang Belajar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalTentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalKontak">Kontak</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-light">Masuk</a>
+                    <a href="register.html" class="btn btn-light text-indigo fw-semibold">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-xl my-5">
+        <div class="row g-4">
+            <aside class="col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 sticky-sidebar">
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush rounded-4">
+                            <a href="#" class="list-group-item list-group-item-action active bg-indigo border-0">Ringkasan Materi</a>
+                            <a href="#" class="list-group-item list-group-item-action">Komponen UI</a>
+                            <a href="#" class="list-group-item list-group-item-action">Catatan Belajar</a>
+                            <a href="#" class="list-group-item list-group-item-action">Latihan Soal</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-lg-9">
+                <div class="p-4 bg-white shadow-sm rounded-4 mb-4 border-top border-5 border-indigo">
+                    <h1 class="h3 fw-bold text-indigo">Selamat Datang di Ruang Belajar</h1>
+                    <p class="text-muted">Platform pembelajaran interaktif berbasis web untuk mendalami HTML, CSS, dan framework modern seperti Bootstrap.</p>
+                    <button class="btn btn-indigo text-white" data-bs-toggle="modal" data-bs-target="#modalKomponen">Coba Komponen</button>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Grid System <span class="badge bg-indigo ms-2">Baru</span></h5>
+                                <p class="card-text text-muted">Pelajari cara menyusun layout responsif menggunakan sistem 12 kolom dari Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Utility Classes</h5>
+                                <p class="card-text text-muted">Manfaatkan class bawaan untuk mengatur margin, padding, warna, dan flexbox dengan cepat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Artikel: Memahami Layout</h4>
+                        <p>Layout memegang peran penting dalam *User Experience* (UX). Sebuah susunan yang rapi akan membuat pembaca betah berlama-lama.</p>
+                        <div class="collapse mt-3" id="collapseArtikel">
+                            <div class="p-3 bg-light rounded-3 border">
+                                Ini adalah konten tambahan dari artikel yang disembunyikan. Dengan komponen Collapse Bootstrap, kita dapat menghemat ruang di layar terutama untuk pengguna smartphone.
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArtikel">
+                            Lanjutkan membaca...
+                        </button>
+                    </div>
+                </div>
+
+                <h4 class="fw-bold mb-3">Pertanyaan Singkat (FAQ)</h4>
+                <div class="accordion shadow-sm mb-5 rounded-4 overflow-hidden" id="faqAccordion">
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Apakah platform ini gratis?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Ya, seluruh materi di Ruang Belajar dapat diakses secara gratis.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Teknologi apa saja yang digunakan?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Website ini murni dibangun menggunakan HTML5, CSS3, JavaScript Vanilla, dan Bootstrap 5.</div>
+                        </div>
+                    </div>
+                </div>
+            </

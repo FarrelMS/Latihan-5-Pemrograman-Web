@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar - Ruang Belajar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+            <h2 class="fw-bold text-center text-indigo mb-2">Buat Akun Baru</h2>
+            <p class="text-center text-muted mb-4">
+              Bergabunglah bersama kami di Ruang Belajar.
+            </p>
+
+            <div class="alert alert-success d-none" id="regSuccess">
+              Registrasi berhasil! (Ini hanya simulasi UI frontend)
+            </div>
+
+            <form id="formRegister" class="needs-validation" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nama Depan *</label>
+                  <input type="text" class="form-control" id="fname" required />
+                  <div class="invalid-feedback">Nama depan wajib diisi.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold"
+                    >Nama Belakang (Opsional)</label
+                  >
+                  <input type="text" class="form-control" id="lname" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Nama Tampilan *</label>
+                <input type="text" class="form-control" id="dname" required />
+                <div class="invalid-feedback">
+                  Nama tampilan tidak boleh kosong.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Email *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="regEmail"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Gunakan format email yang valid.
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Password *</label>
+                  <input
+                    type="password"
+                    class="form-control pass-sync"
+                    id="regPass"
+                    minlength="8"
+                    required
+                  />
+                  <div class="invalid-feedback">Minimal 8 karakter.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold"
+                    >Konfirmasi Password *</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control pass-sync"
+                    id="regPassConf"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Konfirmasi password tidak cocok!
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="showBothPass"
+                />
+                <label
+                  class="form-check-label text-muted small"
+                  for="showBothPass"
+                >
+                  Tampilkan sandi
+                </label>
+              </div>
+
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="termsCheck"
+                  required
+                />
+                <label
+                  class="form-check-label text-muted small"
+                  for="termsCheck"
+                >
+                  Saya setuju dengan
+                  <a
+                    href="#"
+                    class="text-indigo"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalKetentuan"
+                    >Ketentuan Layanan</a
+                  >
+                </label>
+                <div class="invalid-feedback">
+                  Anda harus menyetujui ketentuan layanan.
+                </div>
+              </div>
+
+              <button
+                class="btn btn-indigo text-white w-100 rounded-pill py-2 fw-bold"
+                type="submit"
+              >
+                Daftar Akun
+              </button>
+              <p class="text-center text-muted mt-3 mb-0">
+                Sudah punya akun?
+                <a
+                  href="login.html"
+                  class="text-indigo text-decoration-none fw-bold"
+                  >Masuk di sini</a
+                >
+              </p>
+              <div class="text-center mt-2">
+                <a
+                  href="index.html"
+                  class="text-secondary text-decoration-none small"
+                  >← Beranda</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalKetentuan" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-4 border-0 shadow">
+          <div class="modal-header bg-light border-bottom-0">
+            <h5 class="modal-title fw-bold">Ketentuan Layanan</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-muted small">
+            <p>
+              1. Data yang Anda masukkan pada form ini hanya digunakan untuk
+              simulasi frontend.
+            </p>
+            <p>
+              2. Tidak ada data pribadi atau password yang disimpan ke dalam
+              server atau database sungguhan.
+            </p>
+            <p>
+              3. Ini murni merupakan tugas pemrograman web untuk latihan
+              Bootstrap dan validasi DOM JS.
+            </p>
+          </div>
+          <div class="modal-footer border-top-0">
+            <button
+              type="button"
+              class="btn btn-indigo text-white rounded-pill"
+              data-bs-dismiss="modal"
+            >
+              Saya Paham
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
